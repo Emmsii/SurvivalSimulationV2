@@ -88,9 +88,8 @@ public class MainComponent extends Canvas implements Runnable{
 			frames++;
 			if(System.currentTimeMillis() - timer > 1000){
 				timer += 1000;
-				//System.out.println(updates +" ups " + frames + "fps");
+				System.out.println(updates +" ups " + frames + "fps");
 				System.out.println("UPDATED IN: " + uTimeTaken + " ms");
-				//SHOW STATS
 				updates = 0;
 				frames = 0;
 			}
@@ -174,13 +173,7 @@ public class MainComponent extends Canvas implements Runnable{
 				cell[i][j].update();
 			}
 		}
-		
-//		for(int i = 0; i < personArray.size(); i++){
-//			personArray.get(i).update();
-//		}
-		
-//		personArray.get(6).update();
-		
+
 		uEndTime = System.nanoTime();
 		uTimeTaken = (uEndTime - uStartTime) / 1000000;
 
